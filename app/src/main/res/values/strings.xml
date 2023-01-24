@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Clone Mercado Livre</string>
+    <string name="txt_search">Buscar no Mercado Livre</string>
+    <string name="txt_localizacao">Enviar para Samuel Gomes - Rua Android Studio 10</string>
+    <string name="inspirado_no_que_tem_visto">Inspirado no último visto</string>
+    <string name="ver_mais">Ver mais</string>
+    <string name="preco_produto">R$ 256,95</string>
+    <string name="descricao">Descrição</string>
+    <string name="frete_gratis">Frete grátis</string>
+    <string name="compre_mais">Compre mais...</string>
+    <string name="dias_gratis">Dias Grátis</string>
+    <string name="desconto">Desconto</string>
+    <string name="empresa">Empresa</string>
+</resources>
