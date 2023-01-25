@@ -11,4 +11,14 @@
     <string name="dias_gratis">Dias Grátis</string>
     <string name="desconto">Desconto</string>
     <string name="empresa">Empresa</string>
+    <string name="open_drawer">Abrir</string>
+    <string name="close_drawer">Fechar</string>
+    <string name="nome_do_usuario">Nome do Usuário</string>
+    <string name="inicio">Inicio</string>
+    <string name="buscar">Buscar</string>
+    <string name="notificacoes">Notificações</string>
+    <string name="minhas_compras">Minhas compras</string>
+    <string name="favoritos">Favoritos</string>
+    <string name="nivel_0_mercado_pontos">Nivel 0 - Mercado Pontos</string>
+    <string name="welcome_email">Olá, email@teste.com</string>
 </resources>
