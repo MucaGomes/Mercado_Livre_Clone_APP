@@ -13,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="180dp"
         android:scaleType="centerCrop"
-        android:src="@drawable/image_ads3" />
+        android:src="@drawable/image_ads02" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -35,7 +35,7 @@
                 android:layout_width="match_parent"
                 android:scaleType="centerCrop"
                 android:layout_height="match_parent"
-                app:srcCompat="@drawable/img_quadro01" />
+                app:srcCompat="@drawable/img_quadro_02" />
         </androidx.cardview.widget.CardView>
 
         <LinearLayout
