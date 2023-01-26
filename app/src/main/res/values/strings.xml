@@ -21,4 +21,6 @@
     <string name="favoritos">Favoritos</string>
     <string name="nivel_0_mercado_pontos">Nivel 0 - Mercado Pontos</string>
     <string name="welcome_email">Olá, email@teste.com</string>
+    <string name="tambem_te_interessa">Também te interessa</string>
+    <string name="frete_gratis_premium_card">em milhões de produtos a partir de R$60</string>
 </resources>

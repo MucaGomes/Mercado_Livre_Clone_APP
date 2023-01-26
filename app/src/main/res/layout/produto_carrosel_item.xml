@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="2dp"
+    android:background="@color/white"
+    android:layout_marginRight="12dp"
+    android:layout_height="wrap_content">
+
+
+    <LinearLayout
+        android:layout_width="160dp"
+        android:layout_height="match_parent"
+        android:padding="5dp"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="@string/tambem_te_interessa"
+            android:textStyle="bold"
+            android:textSize="13sp"
+            android:layout_gravity="center"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/gray"/>
+
+        <ImageView
+            android:layout_width="100dp"
+            android:id="@+id/imgProdutoCarrosel"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:src="@drawable/produto_carrosel00" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/descricao"
+            android:textSize="13sp"
+            android:layout_marginStart="5dp"
+            android:textColor="@color/gray"
+            android:id="@+id/descProdutoCarrosel"
+            android:layout_gravity="left"
+            android:maxLines="2"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/preco_produto"
+            android:layout_marginStart="5dp"
+            android:id="@+id/precoProdutoCarrosel"
+            android:layout_gravity="left"
+            android:textColor="@color/black"
+            android:maxLines="2"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/frete_gratis"
+            android:textColor="@color/green"
+            android:layout_marginStart="5dp"
+            android:id="@+id/freteProdutoCarrosel"
+            android:textStyle="bold"
+            android:layout_gravity="left" />
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

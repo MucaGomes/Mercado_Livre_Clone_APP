@@ -5,7 +5,7 @@
     android:id="@+id/nav_header"
     android:layout_width="match_parent"
     android:layout_height="100dp"
-    android:background="@color/yellow_200">
+    android:background="@color/yellow_700">
 
     <ImageView
         android:id="@+id/nav_header_imageView"

@@ -1,6 +1,7 @@
 package com.app.clonemercadolivre
 
 import android.os.Bundle
+import android.text.Html
 import android.view.MenuItem
 import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
@@ -10,20 +11,23 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.app.clonemercadolivre.adapter.AnuncioAdapter
 import com.app.clonemercadolivre.adapter.ProdutoAdapter
+import com.app.clonemercadolivre.adapter.ProdutoCarroselAdapter
 import com.app.clonemercadolivre.databinding.ActivityMainBinding
 import com.app.clonemercadolivre.model.Anuncio
 import com.app.clonemercadolivre.model.Produto
-import com.google.android.material.navigation.NavigationView
+import com.app.clonemercadolivre.model.ProdutoCarrosel
 
 
-class MainActivity : AppCompatActivity(){
+class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
     private lateinit var toggle: ActionBarDrawerToggle
     private lateinit var anuncioAdapter: AnuncioAdapter
     private lateinit var produtoAdapter: ProdutoAdapter
+    private lateinit var produtoCarroselAdapter: ProdutoCarroselAdapter
     private val listaAnuncios: MutableList<Anuncio> = mutableListOf()
     private val listaProdutos: MutableList<Produto> = mutableListOf()
+    private val listaProdutosCarrosel: MutableList<ProdutoCarrosel> = mutableListOf()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,9 +35,15 @@ class MainActivity : AppCompatActivity(){
         setContentView(binding.root)
 
         setupRecyclerViewAnuncios()
+        setupRecyclerViewProdutosCarrosel()
         setupRecyclerViewProdutos()
 
         setupDrawerLayout()
+
+        val searchView = binding.search
+
+        searchView.setQueryHint(Html.fromHtml("<font color = #BABFC4>" + getResources().getString(R.string.txt_search) + "</font>"))
+
 
     }
 
@@ -45,7 +55,12 @@ class MainActivity : AppCompatActivity(){
             drawerLayout.openDrawer(GravityCompat.START)
 
             toggle =
-                ActionBarDrawerToggle(this, drawerLayout, R.string.open_drawer, R.string.close_drawer)
+                ActionBarDrawerToggle(
+                    this,
+                    drawerLayout,
+                    R.string.open_drawer,
+                    R.string.close_drawer
+                )
             drawerLayout.addDrawerListener(toggle)
             toggle.syncState()
 
@@ -101,6 +116,16 @@ class MainActivity : AppCompatActivity(){
         getProdutos()
     }
 
+    private fun setupRecyclerViewProdutosCarrosel() {
+        val recyclerViewProdutosCarrosel = binding.rvlProdutosCarrosel
+        recyclerViewProdutosCarrosel.layoutManager =
+            LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
+        recyclerViewProdutosCarrosel.setHasFixedSize(true)
+        produtoCarroselAdapter = ProdutoCarroselAdapter(this,listaProdutosCarrosel)
+        recyclerViewProdutosCarrosel.adapter = produtoCarroselAdapter
+        getProdutosCarrosel()
+    }
+
     private fun setupRecyclerViewAnuncios() {
         val recyclerViewAnuncios = binding.rvlAds
         recyclerViewAnuncios.layoutManager =
@@ -113,13 +138,47 @@ class MainActivity : AppCompatActivity(){
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
 
-        if(toggle.onOptionsItemSelected(item)){
+        if (toggle.onOptionsItemSelected(item)) {
             return true
         }
 
         return super.onOptionsItemSelected(item)
     }
 
+
+    private fun getProdutosCarrosel() {
+        val prodCarossel00 = ProdutoCarrosel(
+            R.drawable.produto_carrosel00,
+            "R$ 2500,00",
+            "Computador Gamer Completo Amd 78 Full Hd e com placa de video",
+            "Frete grátis"
+        )
+        listaProdutosCarrosel.add(prodCarossel00)
+
+        val prodCarossel01 = ProdutoCarrosel(
+            R.drawable.produto_carrosel01,
+            "R$ 700,00",
+            "Placa Mãe i5 + 16gb de Ram ",
+            "Frete grátis"
+        )
+        listaProdutosCarrosel.add(prodCarossel01)
+
+        val prodCarossel02 = ProdutoCarrosel(
+            R.drawable.produto_carrosel02,
+            "R$ 1750,00",
+            "Cadeira Gamer vermelha com suporte",
+            "Frete grátis"
+        )
+        listaProdutosCarrosel.add(prodCarossel02)
+
+        val prodCarossel03 = ProdutoCarrosel(
+            R.drawable.produto_carrosel03,
+            "R$ 250,00",
+            "Kit de Ferramentas Completo + Maleta e acessórios",
+            "Frete grátis"
+        )
+        listaProdutosCarrosel.add(prodCarossel03)
+    }
     private fun getAnuncios() {
 
         val anuncio01 = Anuncio(
@@ -164,7 +223,7 @@ class MainActivity : AppCompatActivity(){
             com.app.clonemercadolivre.R.drawable.produto02,
             "R$ 950,00",
             "Tv Philco Ptv2023225 Led Full HD",
-            "Frete grpatis"
+            "Frete grÁtis"
         )
         listaProdutos.add(produto02)
 

@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.app.clonemercadolivre.databinding.ProdutoItemBinding
 import com.app.clonemercadolivre.model.Produto
+import com.app.clonemercadolivre.model.ProdutoCarrosel
 
 class ProdutoAdapter(private val context: Context, val listaProdutos: MutableList<Produto>) :
     RecyclerView.Adapter<ProdutoAdapter.ProdutoViewHolder>() {

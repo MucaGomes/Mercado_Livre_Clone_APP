@@ -10,6 +10,8 @@
     <color name="light_gray">#DFDFDF</color>
     <color name="yellow_200">#F7E64F</color>
     <color name="yellow_500">#D5C642</color>
+    <color name="yellow_700">#F5D415</color>
     <color name="dark_blue">#156CB0</color>
     <color name="green">#1A8458</color>
+    <color name="gray">#BABFC4</color>
 </resources>
